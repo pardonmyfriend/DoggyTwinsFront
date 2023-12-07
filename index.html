@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container" id="container">
-        <h1 class="heading">Your Doggy Twin</h1>
+        <h1 class="heading">Your Doggy Twin<img src="images/dog2.png" alt="Icon" style="margin: 0; width: 130px;"></h1>
         <div class="sections-container">
             <div class="section" id="image-upload-section">
                 <label for="input-file" id="drop-area">
@@ -20,23 +20,47 @@
                         <span>Upload any images from desktop</span>
                     </div>
                 </label>
+                <img
+                    id="uploaded-image"
+                    src=""
+                    alt="Uploaded Image"
+                    style="max-width: 100%; max-height: 200px; display: none"
+                />
+                <br><br>
+                <button type="button" class="button">Match!</button>
             </div>
             <div class="section" id="survey-section">
                 <!-- Dodaj treść dla sekcji ankiety tutaj -->
-                <p>Short survey goes here</p>
-                <!-- List of clickable traits -->
-                <!-- <label for="traits">Select Traits:</label>
-                <div id="trait-checkboxes">
-                    {% for trait in traits %}
-                    <label>
-                    <input type="checkbox" name="selected_traits" value="{{ trait }}" />
-                    {{ trait }} </label
-                    ><br />
-                    {% endfor %}
-                </div> -->
+                <p id="traits-head">Define your personality traits</p>
+                <p><input type="range" min="0" max="5" value="2" id="slider">&nbsp;&nbsp;Sensitive<div id="selector">
+                    <div class="SelectBtn"></div>
+                </div></p>
+                
+                <p><input type="range" min="0" max="5" value="2" id="slider">&nbsp;&nbsp;Sensitive</p>
+                <p><input type="range" min="0" max="5" value="2" id="slider">&nbsp;&nbsp;Sensitive</p>
+                <p><input type="range" min="0" max="5" value="2" id="slider">&nbsp;&nbsp;Sensitive</p>
+                <p><input type="range" min="0" max="5" value="2" id="slider">&nbsp;&nbsp;Sensitive</p>
+                <p><input type="range" min="0" max="5" value="2" id="slider">&nbsp;&nbsp;Sensitive</p>
+                <p><input type="range" min="0" max="5" value="2" id="slider">&nbsp;&nbsp;Sensitive</p>
+                <p><input type="range" min="0" max="5" value="2" id="slider">&nbsp;&nbsp;Sensitive</p>
+                <p><input type="range" min="0" max="5" value="2" id="slider">&nbsp;&nbsp;Sensitive</p>
+                <p><input type="range" min="0" max="5" value="2" id="slider">&nbsp;&nbsp;Sensitive</p>
+                <p><input type="range" min="0" max="5" value="2" id="slider">&nbsp;&nbsp;Sensitive</p>
+                <p><input type="range" min="0" max="5" value="2" id="slider">&nbsp;&nbsp;Sensitive</p>
+                <p><input type="range" min="0" max="5" value="2" id="slider">&nbsp;&nbsp;Sensitive</p>
+                <p><input type="range" min="0" max="5" value="2" id="slider">&nbsp;&nbsp;Sensitive</p>
             </div>
         </div>
       </div>
     <script src="script.js"></script>
+    <script>
+        var slider = document.getElementById('slider');
+        var selector = document.getElementById('selector');
+
+        slider.oninput = function(){
+            selector.style.left = this.value + "%";
+        }
+    </script>
+    
 </body>
 </html>
